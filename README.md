@@ -1,7 +1,7 @@
 # Miguel Pena's Developer Portfolio
 
 Welcome to my developer portfolio, built using **React** and styled with **Tailwind CSS**. This portfolio showcases my projects, skills, and ways to get in touch with me.
-[Website Screenshot](/src/assets/ss.png)
+![Website Screenshot](/src/assets/ss.png)
 
 
 ---
