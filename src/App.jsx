@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('About Me'); 
+  const [currentSection, setCurrentSection] = useState('About Me');
 
   const renderSection = () => {
     switch (currentSection) {
@@ -24,8 +24,15 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header setCurrentSection={setCurrentSection} /> 
-      <main className="flex-grow">{renderSection()}</main>
+      {/* Header */}
+      <Header setCurrentSection={setCurrentSection} />
+
+      {/* Main content section */}
+      <main className="flex-grow w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        {renderSection()}
+      </main>
+
+      {/* Footer */}
       <Footer />
     </div>
   );

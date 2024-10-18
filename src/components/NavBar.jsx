@@ -5,23 +5,26 @@ const NavBar = ({ setCurrentSection }) => {
   const [current, setCurrent] = useState('About Me');
 
   return (
-    <nav>
-      <ul className="flex space-x-8"> {/* Horizontal alignment with space between */}
-        {sections.map((section) => (
-          <li
-            key={section}
-            className={`cursor-pointer text-lg hover:text-blue-300 transition-colors duration-300 ${
-              current === section ? 'text-yellow-500' : 'text-white'
+    <nav className="w-full lg:w-auto flex flex-col space-y-4 lg:space-y-0 lg:space-x-4 lg:flex-row items-center lg:items-start">
+      {sections.map((section) => (
+        <div
+          key={section}
+          className={`cursor-pointer relative text-lg transition-all hover:text-yellow-500 ${
+            current === section ? 'text-yellow-500' : ''
+          }`}
+          onClick={() => {
+            setCurrent(section);
+            setCurrentSection(section);
+          }}
+        >
+          {section}
+          <div
+            className={`absolute left-0 w-full h-1 bg-yellow-500 transform transition-transform ${
+              current === section ? 'scale-x-100' : 'scale-x-0'
             }`}
-            onClick={() => {
-              setCurrent(section);
-              setCurrentSection(section);
-            }}
-          >
-            {section}
-          </li>
-        ))}
-      </ul>
+          ></div>
+        </div>
+      ))}
     </nav>
   );
 };

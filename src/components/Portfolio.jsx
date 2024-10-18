@@ -1,18 +1,22 @@
 import Project from './PortfolioProject';
 
+
 const Portfolio = () => {
   const projects = [
-    { title: 'Project 1', image: '/path/to/image1.jpg', deployLink: 'https://example.com', repoLink: 'https://github.com' },
-    // Add more projects...
+    { title: 'Project 1', image: '/src/assets/project1.jpg', deployLink: 'https://example.com', repoLink: 'https://github.com' },
+    { title: 'Project 2', image: '/src/assets/project2.jpg', deployLink: 'https://example.com', repoLink: 'https://github.com' },
+    // Add more projects
   ];
 
   return (
-    <section className="bg-white py-16">
-      <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-royalBlue text-center">Portfolio</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+    <section className="py-16 bg-gray-900 text-white">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-10">My Portfolio</h2>
+        <div className="hexagon-grid">
           {projects.map((project, index) => (
-            <Project key={index} {...project} />
+            <div key={index} className="hexagon hover:scale-105 transition-transform duration-300">
+              <Project {...project} />
+            </div>
           ))}
         </div>
       </div>
