@@ -3,9 +3,10 @@ import Project from './PortfolioProject';
 
 const Portfolio = () => {
   const projects = [
-    { title: 'Project 1', image: '/src/assets/project1.jpg', deployLink: 'https://example.com', repoLink: 'https://github.com' },
-    { title: 'Project 2', image: '/src/assets/project2.jpg', deployLink: 'https://example.com', repoLink: 'https://github.com' },
-    // Add more projects
+    { title: 'Readme Generator', image: '/src/assets/project1.png', repoLink: 'https://github.com/MiguelPena0101/README-Gen' },
+    { title: 'SVG Logo Generator', image: '/src/assets/project2.png', repoLink: 'https://github.com/MiguelPena0101/Logofy' },
+    { title: 'Weather Dashboard', image: '/src/assets/project3.png', deployLink: 'https://miguelpena0101.github.io/Miguel-weather-station/', repoLink: 'https://github.com/MiguelPena0101/Miguel-weather-station' },
+    { title: 'Karate App', image: '/src/assets/project4.png', deployLink: 'https://miguelpena0101.github.io/TheAvengers/', repoLink: 'https://github.com/MiguelPena0101/TheAvengers' },
   ];
 
   return (
