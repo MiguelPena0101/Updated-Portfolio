@@ -1,15 +1,14 @@
 module.exports = {
+  content: [
+    './index.html',
+    './src/**/*.{js,jsx,ts,tsx}', // Make sure these paths include your components
+  ],
   theme: {
     extend: {
       colors: {
-        royalBlue: '#4169E1', // Royal Blue color
-        white: '#ffffff',
+        royalBlue: '#4169E1',
       },
     },
   },
-  content: [
-    './index.html',
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
   plugins: [],
 };
